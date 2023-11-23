@@ -53,8 +53,8 @@ export default function ContactForm() {
                                 required
                             />
                             <Row>
-                                <Col className="offset-md-4" md="4">
-                                    <Button className="btn-fill" color="danger" size="sm" type='submit'>
+                                <Col className="offset-md-4" md="6">
+                                    <Button className="btn-fill" color="danger" size="lg" type='submit'>
                                         Send Message
                                     </Button>
                                 </Col>

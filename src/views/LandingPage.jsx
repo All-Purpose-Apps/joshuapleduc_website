@@ -15,14 +15,10 @@ import {
 } from "reactstrap";
 
 // core components
-import MultiDropdownNavbar from "@navbars/MultiDropdownNavbar.jsx";
-import LandingPageHeader from "@headers/LandingPageHeader.jsx";
-import FooterWhite from "@footers/FooterWhite.jsx";
+import MultiDropdownNavbar from "@components/MultiDropdownNavbar.jsx";
+import LandingPageHeader from "@components/LandingPageHeader.jsx";
+import FooterWhite from "@components/FooterWhite.jsx";
 import ContactForm from "@components/ContactForm.jsx";
-
-import clem from '@img/faces/clem-onojeghuo-3.jpg'
-import joe from '@img/faces/joe-gardner-2.jpg'
-import erik from '@img/faces/erik-lucatero-2.jpg'
 
 function LandingPage() {
 
@@ -44,19 +40,18 @@ function LandingPage() {
                   </h5>
                 </Col>
                 <br />
-                <Col>
+                <Col >
                   <Button
-                    className="btn-fill btn-round mr-5"
+                    className="btn-fill btn-round mr-2"
                     color="danger"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
+                    href="https://drive.google.com/file/d/1q9CMKFyMI-1IAT8P6AqXXX7AuEoGumAG/view?usp=drive_link"
+                    target="_blank"
                   >
                     See Resume
                   </Button>
                   <Button
                     className="btn-fill btn-round"
                     color="danger"
-                    href="#pablo"
                     onClick={(e) => e.preventDefault()}
                   >
                     See Portfolio
@@ -66,7 +61,7 @@ function LandingPage() {
             </Row>
             <br />
             <br />
-            <Row>
+            {/* <Row>
               <Col md="3">
                 <div className="info">
                   <div className="icon icon-danger">
@@ -155,7 +150,7 @@ function LandingPage() {
                   </div>
                 </div>
               </Col>
-            </Row>
+            </Row> */}
           </Container>
         </div>
         {/* <div className="section section-dark text-center landing-section">
