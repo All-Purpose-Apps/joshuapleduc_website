@@ -26,13 +26,13 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="section section-dark text-light landing-section">
+        <div className="section section-light text-dark landing-section">
             <Container>
                 <Row>
                     <Col className="ml-auto mr-auto" md="8">
                         <h2 className="text-center">Email Me</h2>
-                        <h5 className="text-center"><a href="mailto:jpleduc@joshuapleduc.com">or directly at jpleduc@joshuapleduc.com</a></h5>
-                        <Form className="contact-form" onSubmit={e => contactForm(e)}>
+                        <h5 className="text-center"><a href="mailto:jpleduc@joshuapleduc.com">directly at jpleduc@joshuapleduc.com</a></h5>
+                        {/* <Form className="contact-form" onSubmit={e => contactForm(e)}>
                             <Row>
                                 <Col md="6">
                                     <label>Name</label>
@@ -59,7 +59,7 @@ export default function ContactForm() {
                                     </Button>
                                 </Col>
                             </Row>
-                        </Form>
+                        </Form> */}
                     </Col>
                 </Row>
             </Container>

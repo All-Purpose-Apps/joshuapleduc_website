@@ -7,7 +7,7 @@ import { Button, Container } from "reactstrap";
 import david from '@img/luke-chesser.jpg'
 import clem from '@img/IMG_2989-EDIT.jpg'
 
-function LandingPageHeader() {
+function LandingPageHeader({ portfolio }) {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -55,7 +55,7 @@ function LandingPageHeader() {
               <Button
                 className="btn-round mr-1"
                 color="neutral"
-                href="https://drive.google.com/file/d/1q9CMKFyMI-1IAT8P6AqXXX7AuEoGumAG/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1MN3TW6D2E2Tg71VDa2WQSzKb6zbwojkD/view?usp=sharing"
                 target="_blank"
               >
                 Resume
@@ -65,6 +65,7 @@ function LandingPageHeader() {
                 color="neutral"
                 type="button"
                 outline
+                onClick={portfolio}
               >
                 Portfolio
               </Button>

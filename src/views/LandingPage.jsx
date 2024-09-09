@@ -1,14 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 
 // reactstrap components
 import {
   Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  Form,
-  Input,
   Container,
   Row,
   Col,
@@ -19,15 +13,23 @@ import MultiDropdownNavbar from "@components/MultiDropdownNavbar.jsx";
 import LandingPageHeader from "@components/LandingPageHeader.jsx";
 import FooterWhite from "@components/FooterWhite.jsx";
 import ContactForm from "@components/ContactForm.jsx";
+import Projects from "./Projects";
 
 function LandingPage() {
-
   document.documentElement.classList.remove("nav-open");
+
+  // Create a ref for the Projects section
+  const projectsRef = useRef(null);
+
+  // Function to scroll to Projects section
+  const scrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
       <MultiDropdownNavbar />
-      <LandingPageHeader />
+      <LandingPageHeader portfolio={scrollToProjects} />
       <div className="wrapper">
         <div className="section text-center landing-section">
           <Container>
@@ -44,15 +46,23 @@ function LandingPage() {
                   <Button
                     className="btn-fill btn-round mr-2"
                     color="danger"
-                    href="https://drive.google.com/file/d/1q9CMKFyMI-1IAT8P6AqXXX7AuEoGumAG/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1MN3TW6D2E2Tg71VDa2WQSzKb6zbwojkD/view?usp=sharing"
                     target="_blank"
                   >
                     See Resume
                   </Button>
                   <Button
+                    className="btn-fill btn-round mr-2"
+                    color="danger"
+                    href="https://www.linkedin.com/in/joshua-perez-leduc/"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </Button>
+                  <Button
                     className="btn-fill btn-round"
                     color="danger"
-                    onClick={(e) => e.preventDefault()}
+                    onClick={scrollToProjects}
                   >
                     See Portfolio
                   </Button>
@@ -61,264 +71,13 @@ function LandingPage() {
             </Row>
             <br />
             <br />
-            {/* <Row>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-palette" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Beautiful Gallery</h4>
-                    <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
-                    </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-bulb-63" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">New Ideas</h4>
-                    <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
-                    </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-chart-bar-32" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Statistics</h4>
-                    <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
-                    </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-sun-fog-29" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Delightful design</h4>
-                    <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
-                    </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
-            </Row> */}
           </Container>
         </div>
-        {/* <div className="section section-dark text-center landing-section">
-          <Container>
-            <h2 className="title">Projects</h2>
-            <Row>
-              <Col md="4">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={clem}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Henry Ford</CardTitle>
-                        <h6 className="card-category text-muted">
-                          Product Manager
-                        </h6>
-                      </div>
-                    </a>
-                    <p className="card-description text-center">
-                      Teamwork is so important that it is virtually impossible
-                      for you to reach the heights of your capabilities or make
-                      the money that you want without becoming very good at it.
-                    </p>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-link btn-just-icon mr-1"
-                      color="twitter"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-link btn-just-icon mr-1"
-                      color="dribbble"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-dribbble" />
-                    </Button>
-                    <Button
-                      className="btn-link btn-just-icon"
-                      color="linkedin"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={joe}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Sophie West</CardTitle>
-                        <h6 className="card-category text-muted">Designer</h6>
-                      </div>
-                    </a>
-                    <p className="card-description text-center">
-                      A group becomes a team when each member is sure enough of
-                      himself and his contribution to praise the skill of the
-                      others. No one can whistle a symphony. It takes an
-                      orchestra to play it.
-                    </p>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-link btn-just-icon mr-1"
-                      color="twitter"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-link btn-just-icon mr-1"
-                      color="dribbble"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-dribbble" />
-                    </Button>
-                    <Button
-                      className="btn-link btn-just-icon"
-                      color="linkedin"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={erik}
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Robert Orben</CardTitle>
-                        <h6 className="card-category text-muted">Developer</h6>
-                      </div>
-                    </a>
-                    <p className="card-description text-center">
-                      The strength of the team is each individual member. The
-                      strength of each member is the team. If you can laugh
-                      together, you can work together, silence isn’t golden,
-                      it’s deadly.
-                    </p>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-link btn-just-icon mr-1"
-                      color="twitter"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-link btn-just-icon mr-1"
-                      color="dribbble"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-dribbble" />
-                    </Button>
-                    <Button
-                      className="btn-link btn-just-icon"
-                      color="linkedin"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div> */}
+        <div className="section section-dark text-center landing-section" ref={projectsRef}>
+          <Projects />
+        </div>
         <ContactForm />
-      </div >
+      </div>
       <FooterWhite />
     </>
   );
