@@ -66,7 +66,7 @@ function MultiDropdownNavbar() {
       >
         <Container>
           <div className="navbar-translate">
-            <NavbarBrand id="navbar-brand" to="/index" tag={Link}>
+            <NavbarBrand id="navbar-brand" to="/" tag={Link} onClick={(e) => e.preventDefault()}>
               Joshua Perez Leduc
             </NavbarBrand>
             <UncontrolledTooltip placement="bottom" target="navbar-brand">

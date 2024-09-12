@@ -5,7 +5,7 @@ import { Button, Container } from "reactstrap";
 
 // core components
 import david from '@img/luke-chesser.jpg'
-import clem from '@img/IMG_2989-EDIT.jpg'
+import josh from '@img/IMG_2989-EDIT.jpg'
 
 function LandingPageHeader({ portfolio }) {
   let pageHeader = React.createRef();
@@ -41,7 +41,7 @@ function LandingPageHeader({ portfolio }) {
               <a href="#pablo" onClick={(e) => e.preventDefault()}>
                 <img
                   alt="..."
-                  src={clem}
+                  src={josh}
                   style={{ maxHeight: '300px', borderRadius: '300px', filter: 'drop-shadow(0 0 0.75rem black)' }}
                 />
               </a>

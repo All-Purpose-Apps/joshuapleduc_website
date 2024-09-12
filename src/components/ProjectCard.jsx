@@ -1,8 +1,8 @@
 import { Card, CardBody, CardFooter, CardTitle, Button, Col } from 'reactstrap';
 
-export default function ProjectCard({ title, subtitle, description, image, link }) {
+export default function ProjectCard({ title, subtitle, description, image, link, tech, concepts }) {
     return (
-        <Col md="4">
+        <Col md="6">
             <Card className="card-profile card-plain">
                 <div className="card-avatar">
                     <a href={link} target="_blank">
@@ -24,15 +24,29 @@ export default function ProjectCard({ title, subtitle, description, image, link 
                     <p className="card-description text-center">
                         {description}
                     </p>
+                    <p className="card-description text-center">
+                        <strong>Tech:</strong> {tech}
+
+                    </p>
+                    <p className="card-description text-center">
+                        <strong>Concepts:</strong> {concepts}
+                    </p>
                 </CardBody>
                 <CardFooter className="text-center">
+                    <Button
+                        className="btn-link"
+                        color="twitter"
+                        href="/projects"
+                    >
+                        More Details
+                    </Button>
                     <Button
                         className="btn-link"
                         color="twitter"
                         href={link}
                         target="_blank"
                     >
-                        Go to Project
+                        Go to Deployed Project
                     </Button>
                 </CardFooter>
             </Card>

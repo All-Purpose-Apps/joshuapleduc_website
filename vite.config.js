@@ -15,6 +15,7 @@ export default defineConfig({
       '@footers': '/src/components/Footers',
       '@navbars': '/src/components/Navbars',
       '@headers': '/src/components/Headers',
+      '@data': '/src/data',
     },
   },
 });
