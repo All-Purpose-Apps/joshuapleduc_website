@@ -49,13 +49,13 @@ function LandingPageHeader({ portfolio }) {
             <div className="motto">
               <h1 className="title">Joshua Perez Leduc</h1>
               <h3 className="description">
-                Software Engineer, Frontend Developer
+                Software Engineer, Fullstack Developer, and Frontend Engineer
               </h3>
               <br />
               <Button
                 className="btn-round mr-1"
                 color="neutral"
-                href="https://drive.google.com/file/d/1MN3TW6D2E2Tg71VDa2WQSzKb6zbwojkD/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Vhg1VfQKk0gnGmznG5uAXM1r08x50L5d"
                 target="_blank"
               >
                 Resume

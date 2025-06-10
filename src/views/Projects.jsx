@@ -6,7 +6,7 @@ export default function Projects() {
 
     return (
         <div className="wrapper section-dark">
-            <Container style={{ height: '100vh' }}>
+            <Container style={{ paddingTop: '20px', paddingBottom: '100px' }}>
                 <h2 style={{ margin: '0px', paddingTop: '50px', color: 'white' }}>Projects</h2>
                 <div style={{ width: '100%', height: '1px', backgroundColor: 'white', margin: '0 auto', marginBottom: '50px' }}>
                 </div>

@@ -35,7 +35,7 @@ function LandingPage() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="10">
-                <h2 className="title" style={{ marginTop: '1px' }}>Software Engineer | Fullstack Developer</h2>
+                <h2 className="title" style={{ marginTop: '1px' }}>Software Engineer | Fullstack Developer | Frontend Engineer</h2>
                 <Col className="ml-auto mr-auto" md="8">
                   <h5>
                     I am an experienced Software Engineer, Full Stack Developer, and Frontend Engineer with a strong focus on creating tailor-made applications to meet the unique business requirements of my clients. My expertise lies in software development, mobile app creation, frontend and backend web development, as well as database and server management.
@@ -46,7 +46,7 @@ function LandingPage() {
                   <Button
                     className="btn-fill btn-round mr-2 mt-2"
                     color="danger"
-                    href="https://drive.google.com/file/d/1MN3TW6D2E2Tg71VDa2WQSzKb6zbwojkD/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Vhg1VfQKk0gnGmznG5uAXM1r08x50L5d"
                     target="_blank"
                   >
                     See Resume
